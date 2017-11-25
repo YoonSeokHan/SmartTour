@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+tools:context="com.example.dbstj.myapplication.SplashScreen">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="264dp"
+        android:layout_height="27dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Hello? welcome to JEJU"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="198dp"
+        android:layout_marginTop="134dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="38dp"
+        android:layout_height="31dp"
+        android:text="제주"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="225dp"
+        android:layout_below="@+id/textView1"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:text="왓"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="225dp"
+        android:layout_below="@+id/textView1"
+        android:layout_toStartOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="49dp"
+        android:layout_height="31dp"
+        android:text="수과?"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="225dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="87dp"
+        android:layout_height="31dp"
+        android:text="반갑수다!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="225dp"
+        android:layout_below="@+id/textView1"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="264dp"
+        android:layout_height="27dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="what?"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="417dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_marginTop="174dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="264dp"
+        android:layout_height="27dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="su"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="444dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="264dp"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="gwa"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="468dp"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+
+
+</RelativeLayout>
+
