@@ -2,12 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
 tools:context="com.example.dbstj.myapplication.SplashScreen">
+    //상위 뷰의 크기에 맞게 구성 요소를 확장 = match_parent
+    //뷰의 너비와 높이는 그 뷰 안의 콘텐츠에 맞는 최소 크기로 설정 = wrap_parent
 
+    //Hello? welcome to JEJU  텍스트 속성
     <TextView
         android:id="@+id/textView1"
         android:layout_width="264dp"

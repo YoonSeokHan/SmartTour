@@ -1,5 +1,4 @@
 package com.example.dbstj.myapplication;
-
 import android.os.Bundle;
 import android.support.annotation.BoolRes;
 import android.support.v7.app.AppCompatActivity;
@@ -12,13 +11,13 @@ import android.widget.Spinner;
  * Created by dbstj on 2017-11-25.
  */
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity { // 메인화면 엑티비티
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
 
+        //스피너 동작 메소드
         Spinner spinner = (Spinner) findViewById(R.id.spinner1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.city, android.R.layout.simple_spinner_item);
@@ -35,14 +34,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
     }
-
 }
