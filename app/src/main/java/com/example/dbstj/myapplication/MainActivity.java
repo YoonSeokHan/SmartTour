@@ -1,17 +1,29 @@
 package com.example.dbstj.myapplication;
+import android.icu.util.JapaneseCalendar;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.BoolRes;
 import android.support.v7.app.AppCompatActivity;
+import android.util.JsonReader;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by dbstj on 2017-11-25.
  */
 
-public class MainActivity extends AppCompatActivity { // 메인화면 엑티비티
+public class MainActivity extends AppCompatActivity{ // 메인화면 엑티비티
+    Papago papago;
+    JSONObject jo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,5 +51,42 @@ public class MainActivity extends AppCompatActivity { // 메인화면 엑티비�
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+        Button btn = (Button)findViewById(R.id.button);
+
+
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                papago = new Papago();
+                papago.execute("강의실");
+                while(true){
+                    if (papago.getTranslatedText() != null){
+                        try {
+                            JSONArray ja = new JSONArray("[" + papago.getTranslatedText() + "]");
+                            JSONObject jo = ja.getJSONObject(0);
+                            ja = new JSONArray("[" + jo.get("message") + "]");
+                            jo = ja.getJSONObject(0);
+                            ja = new JSONArray("[" + jo.get("result") + "]");
+                            jo = ja.getJSONObject(0);
+                            Toast.makeText(getApplicationContext(),jo.getString("translatedText") ,Toast.LENGTH_LONG).show();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    }
+                }
+                papago = null;
+
+            }
+
+        });
+
+
+    }
+    public void run() {
+
+        papago = null;
     }
 }
