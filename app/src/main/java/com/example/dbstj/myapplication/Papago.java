@@ -45,18 +45,20 @@ public class Papago extends AsyncTask{
 
     @Override
     protected Object doInBackground(Object[] objects) {
-        translatedText = translate((String)objects[0]);
+        translatedText = translate((String)objects[0], (String)objects[1], (String)objects[2]);
         return null;
     }
     @Override
     protected void onCancelled(Object result){
         super.onCancelled();
     }
-    public String translate(String text) {
+
+
+    public String translate(String text, String source, String target) {
         try {
             text = URLEncoder.encode(text, "UTF-8");
             // post request
-            String postParams = "source=ko&target=en&text=" + text;
+            String postParams = "source=" + source + "&target=" + target + "&text=" + text;
             con.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
             wr.writeBytes(postParams);

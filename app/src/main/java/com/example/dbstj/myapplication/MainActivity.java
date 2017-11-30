@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity{ // 메인화면 엑티비�
             @Override
             public void onClick(View view) {
                 papago = new Papago();
-                papago.execute("강의실");
+                papago.execute("강의실", "ko", "en");
                 while(true){
                     if (papago.getTranslatedText() != null){
                         try {
