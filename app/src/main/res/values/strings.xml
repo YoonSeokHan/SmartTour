@@ -4,6 +4,9 @@
     <string name="gwa">gwa</string>
     <string name="su">su</string>
     <string name="what">what?</string>
+    
+    <string name="drawer_open">열려라</string>
+    <string name="drawer_close">닫려라</string>
 
     <string-array name="city">
         <item >Korea</item>
